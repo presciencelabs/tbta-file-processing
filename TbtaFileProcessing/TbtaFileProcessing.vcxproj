@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="DebugWithCString|Win32">
+      <Configuration>DebugWithCString</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseWithCString|Win32">
+      <Configuration>ReleaseWithCString</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EC9CEE21-E54B-42D7-A583-A766C9EC4488}</ProjectGuid>
+    <RootNamespace>TbtaFileProcessing</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithCString|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset Condition="$(VisualStudioVersion) == '12.0'">v120_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithCString|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset Condition="$(VisualStudioVersion) == '12.0'">v120_xp</PlatformToolset>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset Condition="$(VisualStudioVersion) == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset Condition="$(VisualStudioVersion) == '12.0'">v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithCString|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithCString|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.21005.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithCString|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithCString|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\include;..\lib\zlib-1.2.5;..\lib\zlib-1.2.5\contrib\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>xerces-c_3.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\lib;..\lib\zlib125dll\dll32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>IF exist "$(OutDir)..\Deploy\" (del "$(OutDir)..\Deploy\*.dll" "$(OutDir)..\Deploy\*.lib" "$(OutDir)..\Deploy\*.h") ELSE (mkdir "$(OutDir)..\Deploy\")
+copy "$(OutDir)*.lib" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\zlib125dll\dll32\zlibwapi.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\xerces-c-3.1.1-x86-windows-vc-9.0\bin\xerces-c_3_1.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessor.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\FileProcessingException.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessingTypeDefs.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\Notices.txt" "$(OutDir)..\Deploy\"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\include;..\lib\zlib-1.2.5;..\lib\zlib-1.2.5\contrib\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>xerces-c_3.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\lib;..\lib\zlib125dll\dll32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Lib>
+    <PostBuildEvent>
+      <Command>IF exist "$(OutDir)..\Deploy\" (del "$(OutDir)..\Deploy\*.dll" "$(OutDir)..\Deploy\*.lib" "$(OutDir)..\Deploy\*.h") ELSE (mkdir "$(OutDir)..\Deploy\")
+copy "$(OutDir)*.lib" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\zlib125dll\dll32\zlibwapi.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\xerces-c-3.1.1-x86-windows-vc-9.0\bin\xerces-c_3_1.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessor.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\FileProcessingException.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessingTypeDefs.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\Notices.txt" "$(OutDir)..\Deploy\"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugWithCString|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <AdditionalIncludeDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\include;..\lib\zlib-1.2.5;..\lib\zlib-1.2.5\contrib\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TbtaUseCString;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <CallingConvention>Cdecl</CallingConvention>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>xerces-c_3.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\lib;..\lib\zlib125dll\dll32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command>IF exist "$(OutDir)..\Deploy\" (del "$(OutDir)..\Deploy\*.dll" "$(OutDir)..\Deploy\*.lib" "$(OutDir)..\Deploy\*.h") ELSE (mkdir "$(OutDir)..\Deploy\")
+copy "$(OutDir)*.lib" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\zlib125dll\dll32\zlibwapi.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\xerces-c-3.1.1-x86-windows-vc-9.0\bin\xerces-c_3_1.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessor.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\FileProcessingException.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessingTypeDefs.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\Notices.txt" "$(OutDir)..\Deploy\"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseWithCString|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\include;..\lib\zlib-1.2.5;..\lib\zlib-1.2.5\contrib\minizip;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>TbtaUseCString;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>xerces-c_3.lib;zlibwapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>..\lib\xerces-c-3.1.1-x86-windows-vc-9.0\lib;..\lib\zlib125dll\dll32;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <IgnoreAllDefaultLibraries>true</IgnoreAllDefaultLibraries>
+    </Lib>
+    <PostBuildEvent>
+      <Command>IF exist "$(OutDir)..\Deploy\" (del "$(OutDir)..\Deploy\*.dll" "$(OutDir)..\Deploy\*.lib" "$(OutDir)..\Deploy\*.h") ELSE (mkdir "$(OutDir)..\Deploy\")
+copy "$(OutDir)*.lib" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\zlib125dll\dll32\zlibwapi.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\lib\xerces-c-3.1.1-x86-windows-vc-9.0\bin\xerces-c_3_1.dll" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessor.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\FileProcessingException.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\TbtaFileProcessing\TbtaFileProcessingTypeDefs.h" "$(OutDir)..\Deploy\"
+copy "$(SolutionDir)\Notices.txt" "$(OutDir)..\Deploy\"
+</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AbstractTableReader.cpp" />
+    <ClCompile Include="DocxSaxHandler.cpp" />
+    <ClCompile Include="FileProcessingException.cpp" />
+    <ClCompile Include="GZipBinInputStream.cpp" />
+    <ClCompile Include="GZipInputSource.cpp" />
+    <ClCompile Include="TbtaFileProcessor.cpp" />
+    <ClCompile Include="TbtaTableCell.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AbstractTableReader.h" />
+    <ClInclude Include="DocxSaxHandler.h" />
+    <ClInclude Include="FileProcessingException.h" />
+    <ClInclude Include="GZipBinInputStream.h" />
+    <ClInclude Include="GZipInputSource.h" />
+    <ClInclude Include="TbtaFileProcessingTypeDefs.h" />
+    <ClInclude Include="TbtaFileProcessor.h" />
+    <ClInclude Include="TbtaString.h" />
+    <ClInclude Include="TbtaTableCell.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

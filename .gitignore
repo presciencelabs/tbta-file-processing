@@ -1,0 +1,12 @@
+syntax: glob
+Debug
+Release
+*.ncb
+DebugWithCString
+ReleaseWithCString
+*.suo
+*.user
+Deploy
+*.sdf
+*.opensdf
+.vs

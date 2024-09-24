@@ -1,0 +1,38 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Express 2013 for Windows Desktop
+VisualStudioVersion = 12.0.30110.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TbtaFileProcessing", "TbtaFileProcessing\TbtaFileProcessing.vcxproj", "{EC9CEE21-E54B-42D7-A583-A766C9EC4488}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TbtaFileProcessingTests", "TbtaFileProcessingTests\TbtaFileProcessingTests.vcxproj", "{8D929EBB-7CDD-4D11-9ACF-C169C985862F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		DebugWithCString|Win32 = DebugWithCString|Win32
+		Release|Win32 = Release|Win32
+		ReleaseWithCString|Win32 = ReleaseWithCString|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.Debug|Win32.ActiveCfg = Debug|Win32
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.Debug|Win32.Build.0 = Debug|Win32
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.DebugWithCString|Win32.ActiveCfg = DebugWithCString|Win32
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.DebugWithCString|Win32.Build.0 = DebugWithCString|Win32
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.Release|Win32.ActiveCfg = Release|Win32
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.Release|Win32.Build.0 = Release|Win32
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.ReleaseWithCString|Win32.ActiveCfg = ReleaseWithCString|Win32
+		{EC9CEE21-E54B-42D7-A583-A766C9EC4488}.ReleaseWithCString|Win32.Build.0 = ReleaseWithCString|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.Debug|Win32.Build.0 = Debug|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.DebugWithCString|Win32.ActiveCfg = DebugWithCString|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.DebugWithCString|Win32.Build.0 = DebugWithCString|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.Release|Win32.ActiveCfg = Release|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.Release|Win32.Build.0 = Release|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.ReleaseWithCString|Win32.ActiveCfg = ReleaseWithCString|Win32
+		{8D929EBB-7CDD-4D11-9ACF-C169C985862F}.ReleaseWithCString|Win32.Build.0 = ReleaseWithCString|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
